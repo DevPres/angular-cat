@@ -1,8 +1,8 @@
 {
-    "name": "My plugin",
+    "name": "Angular Cat",
     "version": "0.0.1",
     "description": "Description of my_plugin.",
-    "author_name": "Me",
+    "author_name": "Dario Presutti",
     "author_url": "https://mywebsite.me",
     "plugin_url": "https://github.com/my_name/my_plugin",
     "tags": "cat, template, example",
