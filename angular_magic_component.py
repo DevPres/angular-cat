@@ -27,7 +27,7 @@ def angular_magic_component_factory(input):
         }})
         export class [magic_name_capitalized] {{
             [form]
-            [[name = new FormControl('')]]
+            [[purControl = new FormControl('')]]
         }}
     '
 
