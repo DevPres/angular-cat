@@ -87,7 +87,7 @@ import {{[formControl][[FormControl]], [form][[FormGroup]]}} from '@angular/form
 }})
 export class CatComponent {{
     [signal]
-    cat: WritableSignal<string>=signal('meoow');
+    [[cat: WritableSignal<string>=signal('meoow');]]
     [formControl]
     [[catControl = new FormControl<any>('')]]
     [form]
