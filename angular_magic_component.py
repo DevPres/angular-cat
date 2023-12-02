@@ -14,8 +14,8 @@ def angular_magic_component_factory(input):
     This is an example of angular_magic_components: 
     '
         import {{Component}} from '@angular/core'
-        [form]
-        [[import {{FormControl}} from '@angular/forms']] 
+        [meow]
+        [[import {{ mad cat }} from '@everywhere']] 
 
         @Component({{
             selector: '[prefix]-[magic_name]',
@@ -26,17 +26,15 @@ def angular_magic_component_factory(input):
             styles: ``
         }})
         export class [magic_name_capitalized] {{
-            [form]
-            [[purControl = new FormControl('')]]
             [meow]
-            [i'm a cat]
+            [[i'm a cat]]
         }}
     '
 
-    if in the magic_keys there  is only key form, and the magic_name is 'cat' the answer should be:
+    if in the magic_keys there is only key meow, and the magic_name is 'cat' the answer should be:
     '
         import {{Component}} from '@angular/core'
-        import {{FormControl}} from '@angular/forms'
+        import {{ mad cat }} from '@everywhere'
 
         @Component({{
             selector: 'app-cat-component',
@@ -47,7 +45,7 @@ def angular_magic_component_factory(input):
             styles: ``
         }})
         export class CatComponent {{
-            purControl = new FormControl('')
+            i'm a cat
         }}
     '
     if the magic_keys are empty, the answer should be:
@@ -88,11 +86,11 @@ import {{[formControl][[FormControl]], [form][[FormGroup]]}} from '@angular/form
     styles: ``
 }})
 export class CatComponent {{
-    [signal]
-    [[cat: WritableSignal<string>=signal('meoow');]]
-    [formControl]
-    [[catControl = new FormControl<any>('');]]
-    [form]
-    [[catGroup = new FormGroup<any>({{}});]]
+    [ signal ]
+    [[ cat: WritableSignal<string>=signal('meoow'); ]]
+    [ formControl ]
+    [[ catControl = new FormControl<any>(''); ]]
+    [ form ]
+    [[ catGroup = new FormGroup<any>({{}}); ]]
 }}
 '''
