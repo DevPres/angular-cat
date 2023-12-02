@@ -74,7 +74,8 @@ def angular_magic_component_factory(input):
 
 
 angular_magic_component_template = f'''
-import {{Component [signal][[signal]]}} from '@angular/core'
+import {{Component [signal][[WritableSignal, signal]]}} from '@angular/core'
+import {{[formControl][[FormControl]], [form][[FormGroup]]}} from '@angular/forms';
 
 @Component({{
     selector: 'app-cat-component',
@@ -87,5 +88,9 @@ import {{Component [signal][[signal]]}} from '@angular/core'
 export class CatComponent {{
     [signal]
     cat: WritableSignal<string>=signal('meoow');
+    [formControl]
+    [[catControl = new FormControl<any>('')]]
+    [form]
+    [[catGroup = new FormGroup<any>({{}})]]
 }}
 '''
