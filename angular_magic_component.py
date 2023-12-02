@@ -28,6 +28,8 @@ def angular_magic_component_factory(input):
         export class [magic_name_capitalized] {{
             [form]
             [[purControl = new FormControl('')]]
+            [meow]
+            [i'm a cat]
         }}
     '
 
