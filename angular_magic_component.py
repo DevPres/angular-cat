@@ -61,11 +61,11 @@ def angular_magic_component_factory(input):
         }})
         export class CatComponent {{}}
     '
-    
-    Return ONLY the magic component WITHOUT explanation.
-    NEVER add code that is not in angular magic component
 
     This is the angular magic component: {angular_magic_component}.
+
+    Return ONLY the magic component WITHOUT explanation.
+    NEVER add code that is not in angular magic component
     '''
 
 
