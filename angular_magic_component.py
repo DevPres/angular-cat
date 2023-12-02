@@ -70,7 +70,7 @@ def angular_magic_component_factory(input):
         {angular_magic_component_template}.
     '
 
-    NEVER add explanation
+    answer with ONLY the angular_magic_component
     NEVER add code that is not in angular_magic_component
     '''
 
