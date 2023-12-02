@@ -63,10 +63,13 @@ def angular_magic_component_factory(input):
         export class CatComponent {{}}
     '
 
-    This is the angular magic component: {angular_magic_component_template}.
+    This is the angular_magic_component:
+    '
+        {angular_magic_component_template}.
+    '
 
-    Return ONLY the magic component WITHOUT explanation.
-    NEVER add code that is not in angular magic component
+    NEVER add explanation
+    NEVER add code that is not in angular_magic_component
     '''
 
 
@@ -83,6 +86,6 @@ import {{Component [signal][[signal]]}} from '@angular/core'
 }})
 export class CatComponent {{
     [signal]
-    const cat: WritableSignal<string>=signal('meoow');
+    cat: WritableSignal<string>=signal('meoow');
 }}
 '''
