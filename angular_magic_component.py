@@ -33,7 +33,7 @@ def angular_magic_component_factory(input):
         }}
     '
 
-    if in the magic_keys there is the key is only form, and the magic_name is 'cat' the result should be:
+    if in the magic_keys there  is only key form, and the magic_name is 'cat' the result should be:
     '
         import {{Component}} from '@angular/core'
         import {{FormControl}} from '@angular/forms'
