@@ -33,7 +33,7 @@ def angular_magic_component_factory(input):
         }}
     '
 
-    if in the magic_keys there  is only key form, and the magic_name is 'cat' the result should be:
+    if in the magic_keys there  is only key form, and the magic_name is 'cat' the answer should be:
     '
         import {{Component}} from '@angular/core'
         import {{FormControl}} from '@angular/forms'
@@ -50,7 +50,7 @@ def angular_magic_component_factory(input):
             purControl = new FormControl('')
         }}
     '
-    if the magic_keys are empty, the result should be:
+    if the magic_keys are empty, the answer should be:
     '
         import {{Component}} from '@angular/core'
 
@@ -70,8 +70,8 @@ def angular_magic_component_factory(input):
         {angular_magic_component_template}.
     '
 
-    answer with ONLY the angular_magic_component
-    NEVER add code that is not in angular_magic_component
+    NEVER add code that is not in angular_magic_component,
+    in the answer must be ONLY the code
     '''
 
 
@@ -91,8 +91,8 @@ export class CatComponent {{
     [signal]
     [[cat: WritableSignal<string>=signal('meoow');]]
     [formControl]
-    [[catControl = new FormControl<any>('')]]
+    [[catControl = new FormControl<any>('');]]
     [form]
-    [[catGroup = new FormGroup<any>({{}})]]
+    [[catGroup = new FormGroup<any>({{}});]]
 }}
 '''
