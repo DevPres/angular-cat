@@ -29,4 +29,4 @@ def get_angular_magic_component(input, cat):
 @hook
 def before_rabbithole_stores_documents(doc, cat):
     prompt = f'''Extract relevant text from this doc: {doc}'''
-    return cat.llm(prompt)
+    cat.llm(prompt)
