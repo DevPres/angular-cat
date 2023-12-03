@@ -1,14 +1,14 @@
 def angular_magic_component_factory(input):
     return f'''
     This is the user request: '{input}'. 
-    Answers ALWAYS following below instruction.
+    Parse the angular_magic_component following the below instruction.
 
     instructions: 
     '
         {instructions}
     '
 
-    This is the ANGULAR_MAGIC_COMPONENT:
+    This is the angular_magic_component:
     '
         {angular_magic_component_template}.
     '
@@ -38,37 +38,36 @@ export class CatComponent {{
 '''
 
 instructions='''
-In the request there are strings that are keys. these are MAGIC_KEYS. request example: 'generate angular component with keys: form,signal ....'. in this example form and signal are MAGIC_KEYS.
-In the request there is a string that is the name. this is the MAGIC_NAME. request example: 'generate angular component with name cat-template'. in this example cat-template is the MAGIC_NAME. if there isn't a name the name is ALWAYS cat-template
-In the request there is a string that is the prefix. this is the PREFIX. request example 'generate angular component with prefix app'. in this example app is the PREFIX. if there isn't a PREFIX the PREFIX is ALWAYS app
-The MAGIC_NAME_PASCAL_CASE is equal to the MAGIC_NAME but in PascalCase and ends with Component. example if MAGIC_NAME is cat-pur the MAGIC_NAME_PASCAL_CASE is CatPurComponent.
+In the request there are keys. 
+In the request there is the name. if there isn't the name is ALWAYS cat-litter
+In the request there is the prefix. if there isn't a prefix the prefix is ALWAYS app
+The pascalname is equal to the name but in PascalCase and ends with 'Component'.
+In the angular_magic_component there are string between single square, example [string]. these are the magic_keys. And string between double square, example [[string]]. these are magic_code.
 
-In the ANGULAR_MAGIC_COMPONENT there are string between single square, example [form]. these are the KEY. And string between double square, example [[import {FormControl} from '@angular/forms']]. these are the associated CODE.
-If a key is among MAGIC_KEYS, remove the key, and leave ONLY the CODE WITHOUT square brackets.
-if a key isn't among MAGIC_KEYS, remove the KEY and the CODE from ANGULAR_MAGIC_COMPONENT
-NEVER add a message, but answers only with the ANGULAR_MAGIC_COMPONENT
+If a magic_keys is among the keys, remove the key, and leave ONLY the CODE without square brackets.
+if a magic_keys isn't among the keys, remove the KEY and the associated CODE from angular_magic_component
 
-This is an example of ANGULAR_MAGIC_COMPONENT: 
+This is an example of angular_magic_component: 
 '
     import {Component} from '@angular/core'
     [ meow ]
     [[ import { mad cat } from '@everywhere' ]] 
 
     @Component({{
-        selector: '[PREFIX]-[MAGIC_NAME]',
+        selector: '[prefix]-[name]',
         standalone: true,
         template: `
             <p>Meoow!<\p>
         `,
         styles: ``
     }})
-    export class [MAGIC_NAME_PASCAL_CASE] {{
+    export class [pascalname] {{
         [ meow ]
         [[ i'm a cat ]]
     }}
 '
 
-if in the MAGIC_KEYS there is only key meow, and the MAGIC_NAME is 'cat' the answer should be:
+if in the MAGIC_KEYS there is only key meow, and the name is 'cat' the answer should be:
 '
     import {Component} from '@angular/core'
     import { cats } from '@everywhere'
