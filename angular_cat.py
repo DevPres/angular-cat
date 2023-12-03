@@ -24,3 +24,9 @@ def get_angular_magic_component(input, cat):
     amg = angular_magic_component_factory(input)
 
     return amg
+
+
+@hook
+def before_rabbithole_stores_documents(doc, cat):
+    prompt = f'''Extract relevant text from this doc: {doc}'''
+    return cat.llm(prompt)
