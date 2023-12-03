@@ -45,7 +45,7 @@ The pascalname is equal to the name but in PascalCase and ends with 'Component'.
 In the angular_magic_component there are string between single square, example [string]. these are the magic_keys. And string between double square, example [[string]]. these are magic_code.
 
 If a magic_keys is among the keys, remove the key, and leave ONLY the CODE without square brackets.
-if a magic_keys isn't among the keys, remove the KEY and the associated CODE from angular_magic_component
+if a magic_keys isn't among the keys, remove the magic_key and the associated magic_code from angular_magic_component
 
 This is an example of angular_magic_component: 
 '
