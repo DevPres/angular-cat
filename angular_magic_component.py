@@ -64,10 +64,12 @@ This is an example of angular_magic_component:
     export class [pascalname] {{
         [ meow ]
         [[ i'm a cat ]]
+        [ pur ]
+        [[ pur things ]] 
     }}
 '
 
-if in the MAGIC_KEYS there is only key meow, and the name is 'cat' the answer should be:
+if in the magic_keys there is only key meow, and the name is 'cat' the answer should be:
 '
     import {Component} from '@angular/core'
     import { cats } from '@everywhere'
@@ -84,7 +86,7 @@ if in the MAGIC_KEYS there is only key meow, and the name is 'cat' the answer sh
         i'm a cat
     }}
 '
-if the MAGIC_KEYS are empty, the answer should be:
+if the magic_keys are empty, the answer should be:
 '
     import {{Component}} from '@angular/core'
 
